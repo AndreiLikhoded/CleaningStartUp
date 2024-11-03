@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заказа услуги</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .form-container { max-width: 300px; }
+        .message { display: none; margin-top: 20px; color: green; }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2>Заказ услуги</h2>
+    <form id="orderForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" required><br><br>
+        <label for="phone">Номер телефона:</label>
+        <input type="tel" id="phone" required><br><br>
+        <button type="submit">Отправить</button>
+    </form>
+    <div id="message" class="message">С вами свяжутся!</div>
+</div>
+
+<script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // предотвращаем перезагрузку страницы
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+
+            fetch('http://localhost:8080/order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, phone })
+            })
+            .then(response => response.text())
+            .then(message => {
+                document.getElementById('message').innerText = message;
+                document.getElementById('message').style.display = 'block';
+                document.getElementById('orderForm').reset();
+            })
+            .catch(error => console.error('Ошибка:', error));
+        });
+    </script>
+</body>
+</html>

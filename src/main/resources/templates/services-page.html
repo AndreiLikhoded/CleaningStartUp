@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,
+    500,600,700,800" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Services Page</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container _container">
+        <a href="" class="header__logo">
+          AdamInspection
+          <a href="https://wa.me/+79154405086" target="_blank">
+            <button style="background-color: #25D366; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+              Написать в WhatsApp
+            </button>
+          </a>
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="/" class="menu__link">Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="/services-page.html" class="menu__link">Services</a>
+            </li>
+            <li class="menu__item">
+              <a href="" class="menu__link">Book Inspection</a>
+            </li>
+            <li class="menu__item">
+              <a href="" class="menu__link">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="page">
+      <div class="page__main-block main-block">
+      <div class="main-block__container _container">
+        <div class="main-block__body-service-page">
+          <h1 class="main-block__service-title">QUALITY DOES NOT NEED TO BE EXPENSIVE</h1>
+          <div class="main-block__text">
+            At The Home Inspectors we pride ourselves on giving you the best
+            service at the best price. Everything you need, nothing you don’t.
+          </div>
+          <div class="main-block__buttons">
+            <a href="" class="main-block__button main-block__button_orange">
+              Book Your Inspection Now</a>
+            <a href="" class="main-block__button main-block__button_border">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="main-block__image-service-page _ibg">
+        <img src="img/maarten-deckers-0-frPETzEVs-unsplash.jpg" alt="cover">
+      </div>
+    </div>
+      <div class="line">
+        <div class="line__row">
+          <div class="line__text">
+            GENERAL HOME INSPECTION
+          </div>
+        </div>
+      </div>
+      <section class="second__block">
+        <form method="POST" th:object="${cleaningService}">
+                  <span class="validationError"
+                        th:if="${#fields.hasErrors('cleaningServiceItems')}"
+                        th:errors="*{cleaningServiceItems}">Cleaning Service Item Error</span>
+        <div class="second__block__container _container">
+          <div class="second__block__row">
+            <div class="second__block__body">
+              <div class="ingredient-group" id="wet_cleaning">
+                <h3>Влажная уборка:</h3>
+                <div th:each="cleaningServiceItem : ${wet_cleaning}">
+                  <input th:field="*{cleaningServiceItems}" type="checkbox"
+                         th:value="${cleaningServiceItem.id}"/>
+                  <span th:text="${cleaningServiceItem.name}"></span><br/>
+                </div>
+              </div>
+            </div>
+            <div class="second__block__image">
+              <img src="img/kedibone-isaac-makhumisane-rpyJIpXf5sk-unsplash (1).jpg" alt="image">
+            </div>
+          </div>
+          <div class="second__block__second__row">
+            <div class="second__block__second__image">
+              <img src="img/img_14.png" alt="image">
+            </div>
+            <div class="second__block__second__body">
+              <div class="ingredient-group" id="general_cleaning">
+                <h3>Генеральная уборка:</h3>
+                <div th:each="cleaningServiceItem : ${general_cleaning}">
+                  <input th:field="*{cleaningServiceItems}" type="checkbox"
+                         th:value="${cleaningServiceItem.id}"/>
+                  <span th:text="${cleaningServiceItem.name}"></span><br/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="second__block__third__row">
+            <div class="second__block__body">
+              <div class="ingredient-group" id="cleaning_after_repair">
+                <h3>Уборка после ремонта:</h3>
+                <div th:each="cleaningServiceItem : ${cleaning_after_repair}">
+                  <input th:field="*{cleaningServiceItems}" type="checkbox"
+                         th:value="${cleaningServiceItem.id}"/>
+                  <span th:text="${cleaningServiceItem.name}"></span><br/>
+                </div>
+              </div>
+            </div>
+            <div class="second__block__image">
+              <img src="img/kedibone-isaac-makhumisane-rpyJIpXf5sk-unsplash (1).jpg" alt="image">
+            </div>
+          </div>
+          <div class="second__block__fourth__row">
+            <div class="second__block__second__image">
+              <img src="img/img_14.png" alt="image">
+            </div>
+            <div class="second__block__second__body">
+              <div class="ingredient-group" id="dry_cleaning_of_upholstered_furniture">
+                <h3>Генеральная уборка:</h3>
+                <div th:each="cleaningServiceItem : ${dry_cleaning_of_upholstered_furniture}">
+                  <input th:field="*{cleaningServiceItems}" type="checkbox"
+                         th:value="${cleaningServiceItem.id}"/>
+                  <span th:text="${cleaningServiceItem.name}"></span><br/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="second__block__fifth__row">
+            <div class="second__block__body">
+              <div class="ingredient-group" id="window_cleaning">
+                <h3>Мойка окон:</h3>
+                <div th:each="cleaningServiceItem : ${window_cleaning}">
+                  <input th:field="*{cleaningServiceItems}" type="checkbox"
+                         th:value="${cleaningServiceItem.id}"/>
+                  <span th:text="${cleaningServiceItem.name}"></span><br/>
+                </div>
+              </div>
+            </div>
+            <div class="second__block__image">
+              <img src="img/kedibone-isaac-makhumisane-rpyJIpXf5sk-unsplash (1).jpg" alt="image">
+            </div>
+          </div>
+          <div class="second__block__sixth__row">
+            <div class="second__block__second__image">
+              <img src="img/img_14.png" alt="image">
+            </div>
+            <div class="second__block__second__body">
+              <div class="ingredient-group" id="washing_curtains">
+                <h3>Генеральная уборка:</h3>
+                <div th:each="cleaningServiceItem : ${washing_curtains}">
+                  <input th:field="*{cleaningServiceItems}" type="checkbox"
+                         th:value="${cleaningServiceItem.id}"/>
+                  <span th:text="${cleaningServiceItem.name}"></span><br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div>
+            <h3>Внесите своё имя:</h3>
+            <input type="text" th:field="*{name}"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('name')}"
+                  th:errors="*{name}">Name Error
+                    </span>
+            <br/>
+            <h3>Внесите номер телефона:</h3>
+            <input type="text" th:field="*{phoneNumber}"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('phoneNumber')}"
+                  th:errors="*{phoneNumber}">Name Error
+                    </span>
+            <br/>
+            <button>Подтвердите заказ</button>
+          </div>
+          <ul>
+            <li th:each="cleaningService : ${cleaningServiceOrder.cleaningServices}">
+              <span th:text="${cleaningService.name}">cleaningService name</span></li>
+          </ul>
+          <ul>
+            <li th:each="cleaningService : ${cleaningServiceOrder.cleaningServices}">
+              <span th:text="${cleaningService.phoneNumber}">cleaningService name</span></li>
+          </ul>
+        </form>
+      </section>
+    </main>
+    <div class="footer">
+      <div class="footer__services__top">
+        <div class="footer__main _container">
+          <div class="footer__row">
+            <div class="footer__column">
+              <div class="footer__label">Company Info</div>
+              <nav class="footer__menu menu-footer">
+                <ul class="menu-footer__list">
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Services</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Book Inspection</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Contact Us</a> </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__column">
+              <div class="footer__label">Legal</div>
+              <nav class="footer__menu menu-footer">
+                <ul class="menu-footer__list">
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Services</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Book Inspection</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Contact Us</a> </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__column">
+              <div class="footer__label">Feature</div>
+              <nav class="footer__menu menu-footer">
+                <ul class="menu-footer__list">
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Services</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Book Inspection</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Contact Us</a> </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__column">
+              <div class="footer__label">Resources</div>
+              <nav class="footer__menu menu-footer">
+                <ul class="menu-footer__list">
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Services</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Book Inspection</a> </li>
+                  <li class="menu-footer__item"><a href="" class="menu-footer__link">Contact Us</a> </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__column">
+              <div class="footer__label">Get In Touch</div>
+              <div class="footer__contacts contacts-footer">
+                <a href="tel:9154405086" class="contacts-footer__item contacts-footer__item_phone">+7(915)4405086</a>
+                <a href="" class="contacts-footer__item contacts-footer__item_map">USA Texas</a>
+                <a href="mailto:liberty102and8131186@gmail.com" class="contacts-footer__item contacts-footer__item_email">liberty102and8131186@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer__bottom">
+        <div class="footer__container _container">
+          <div class="footer__copy">Made With Love By AdamInspection All Right Reserved</div>
+          <div class="footer__social social">
+            <a href="" class="social__item">
+              <img src="img/img_8.png" alt="">
+            </a>
+            <a href="" class="social__item">
+              <img src="img/img_8.png" alt="">
+            </a>
+            <a href="" class="social__item">
+              <img src="img/img_8.png" alt="">
+            </a>
+            <a href="" class="social__item">
+              <img src="img/img_8.png" alt="">
+            </a>
+          </div>
+        </div>
+        </main>
+      </footer>
+    </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

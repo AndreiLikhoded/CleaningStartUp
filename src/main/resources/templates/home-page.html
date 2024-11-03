@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,
+    500,600,700,800" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home Page</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__container _container">
+            <a href="" class="header__logo">
+                AdamInspection
+            </a>
+            <nav class="header__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="/" class="menu__link">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a th:href="@{/services-page}" id="services-page" class="menu__link">Services</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Book Inspection</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="page">
+        <div class="page__main-block main-block">
+            <div class="main-block__container _container">
+                <div class="main-block__body">
+                    <h1 class="main-block__title">Уборка квартир и офисов в Бишкеке</h1>
+                    <div class="main-block__text">
+                        Crystal.kg – клининговая компания в Бишкеке.
+                        Профессиональные услуги по уборке квартир,
+                        офисов и частных домов по доступным ценам
+                        от 39 сомов за кв.м.
+                        +996 755 15 16 28
+                    </div>
+                    <div class="main-block__buttons">
+                        <a th:href="@{/services-page}" id="services-page" class="main-block__button main-block__button_orange">
+                            Book Your Inspection Now</a>
+                        <a href="" class="main-block__button main-block__button_border">Learn More</a>
+                    </div>
+                    <div class="slogan__text">Наши виды уборки</div>
+                </div>
+            </div>
+            <div class="main-block__image _ibg">
+                <img src="img/oak-motion-JNvfW5rTVF8-unsplash.jpg" alt="cover">
+            </div>
+        </div>
+        <section class="page__services services">
+            <div class="services__container _container">
+                <div class="services__body">
+                    <div class="services__column">
+                        <div class="services__item item-service">
+                            <div class="item-service__icon">
+                                <img src="img/" alt="">
+                            </div>
+                            <h3 class="item-service__title">Влажная уборка</h3>
+                            <div class="price">50 сом/м2</div>
+                            <div class="item-service__text">
+                                - Полы и плинтуса сухая и влажная уборка
+                                - Обеспыливание всех поверхностей
+                                - Чистка зеркал
+                                - Протирка дверей
+                                - Обеспыливание фасадов шкафов
+                                - Протирка полок хранения
+                                - Мойка и обезжиривание фасадов кухонных шкафов, столешницы и фартука
+                                - Мойка кухонных раковин, смесителей
+                                - Санузел и ванная комната (моем полностью со стенами)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__column">
+                        <div class="services__item item-service">
+                            <div class="item-service__icon">
+                                <img src="img/" alt="">
+                            </div>
+                            <h3 class="item-service__title">Генеральная уборка</h3>
+                            <div class="price">от 70 сом/м2</div>
+                            <div class="item-service__text">
+                                - Полы и плинтуса сухая и влажная уборка
+                                - Обеспыливание всех поверхностей
+                                - Чистка зеркал
+                                - Протирка дверей
+                                - Обеспыливание фасадов шкафов
+                                - Протирка полок хранения
+                                - Мойка и обезжиривание фасадов кухонных шкафов, столешницы и фартука
+                                - Мойка кухонных раковин, смесителей
+                                - Санузел и ванная комната (моем полностью со стенами)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__column">
+                        <div class="services__item item-service item-service_green">
+                            <div class="item-service__icon">
+                                <img src="img/" alt="">
+                            </div>
+                            <h3 class="item-service__title">Уборка после ремонта</h3>
+                            <div class="price">80 сом/м2</div>
+                            <div class="item-service__text">
+                                - Комнаты и коридоры
+                                - Удаление строительной пыли и сложных загрязнений со всех поверхностей на всю высоту помещения.
+                                - Кухня
+                                - Мытьё кухонного гарнитура, бытовой техники, удаление следов ремонта.
+                                - Ванная комната
+                                - Очистка и дезинфекция сантехники. Мытьё плитки и потолков, очистка швов на всю высоту помещения.
+                                - Уборка после ремонта содержит более 45 видов работ.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__column">
+                        <div class="services__item item-service">
+                            <div class="item-service__icon">
+                                <img src="img/" alt="">
+                            </div>
+                            <h3 class="item-service__title">Химчистка мягкой мебели</h3>
+                            <div class="price">от 350 сом</div>
+                            <div class="item-service__text">
+                                - Диваны
+                                - Стулья
+                                - Кресла
+                                - Матрасы
+                                - Ковролины</div>
+                        </div>
+                    </div>
+                    <div class="services__column">
+                        <div class="services__item item-service">
+                            <div class="item-service__icon">
+                                <img src="img/" alt="">
+                            </div>
+                            <h3 class="item-service__title">Мойка окон</h3>
+                            <div class="price">от 100 сом</div>
+                            <div class="item-service__text">
+                                - Инвентарь
+                                - Окна
+                                - Мытьё окон включает в себя мытьё окна с двух сторон, рам, отливов и подоконников.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__column">
+                        <div class="services__item item-service item-service_green">
+                            <div class="item-service__icon">
+                                <img src="img/" alt="">
+                            </div>
+                            <h3 class="item-service__title">Стирка штор</h3>
+                            <div class="price">от 150 сом/м2</div>
+                            <div class="item-service__text">
+                                - Инвентарь
+                                - Бережная чистка штор
+                                - Вывоз и доставка
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page__practice practice">
+            <div class="practice__container _container">
+                <div class="praactice__header header-block">
+                    <h2 class="header-block__title">Practice Advice</h2>
+                    <div class="header-block__sub-title">Problems trying to resolve the conflict
+                        between the two major realms <br> of Classical physics: Newtonian mechanics.
+                    </div>
+                </div>
+                <div class="practice__body">
+                    <div class="practice__column">
+                        <article class="practice__item item-practice">
+                            <div class="item-practice__content">
+                                <a href="" class="item-practice__link">
+                                    <h4 class="item-practice__title">A single source of truth</h4>
+                                </a>
+                                <div class="item-practice__text">
+                                    Newton thought that light was made up of particles.
+                                </div>
+                            </div>
+                            <a href="" class="item-practice__image_ibg">
+                                <img scr="" alt="A single source of truth">
+                            </a>
+                        </article>
+                    </div>
+                    <div class="practice__column">
+                        <article class="practice__item item-practice">
+                            <div class="item-practice__content">
+                                <a href="" class="item-practice__link">
+                                    <h4 class="item-practice__title">A single source of truth</h4>
+                                </a>
+                                <div class="item-practice__text">
+                                    Newton thought that light was made up of particles.
+                                </div>
+                            </div>
+                            <a href="" class="item-practice__image_ibg">
+                                <img scr="" alt="A single source of truth">
+                            </a>
+                        </article>
+                    </div>
+                    <div class="practice__column">
+                        <article class="practice__item item-practice">
+                            <div class="item-practice__content">
+                                <a href="" class="item-practice__link">
+                                    <h4 class="item-practice__title">A single source of truth</h4>
+                                </a>
+                                <div class="item-practice__text">
+                                    Newton thought that light was made up of particles.
+                                </div>
+                            </div>
+                            <a href="" class="item-practice__image_ibg">
+                                <img scr="" alt="A single source of truth">
+                            </a>
+                        </article>
+                    </div>
+                    <div class="practice__column">
+                        <article class="practice__item item-practice">
+                            <div class="item-practice__content">
+                                <a href="" class="item-practice__link">
+                                    <h4 class="item-practice__title">A single source of truth</h4>
+                                </a>
+                                <div class="item-practice__text">
+                                    Newton thought that light was made up of particles.
+                                </div>
+                            </div>
+                            <a href="" class="item-practice__image_ibg">
+                                <img scr="" alt="A single source of truth">
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page__whoweare whoweare">
+            <div class="whoweare__container _container">
+                <div class="practice__header header-block">
+                    <h2 class="header-block__title">Who We Are</h2>
+                    <div class="header-block__sub-title">
+                        Problems trying to resolve the conflict between<br>the two majors.
+                    </div>
+                </div>
+                <div class="whoweare__body">
+                    <div class="whoweare__video">
+                        <iframe width="560" height="315" src="https://www.youtube.
+            com/embed/siN7p6s9HWM?si=otg7nM3wswhiRnmo"
+                                title="YouTube video player"
+                                frameborder="0" allow="accelerometer; autoplay;
+                     clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+                     web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="whoweare__content">
+                        <div class="whoweare__top">
+                            <h2 class="whoweare__title">Most trusted in our field.</h2>
+                            <div class="whoweare__text">Most calendars are designed for teams. Slate is
+                                designed for freelancers.</div>
+                        </div>
+                        <div class="whoweare__items">
+                            <div class="whoweare__item item-whoweare">
+                                <div class="item-whoweare__icon">
+                                    <img src="img/free-icon-font-audit-13794593.svg" alt="">
+                                </div>
+                                <div class="item-whoweare__body">
+                                    <div class="item-whoweare__title">the quick fox jumps over lazy dod
+                                        Things on a very small.</div>
+                                    <div class="item-whoweare__text">Things on a very small scale...
+                                        Things on a very small scale...Things on a very small scale...
+                                        Things on a very small scale...Things on a very small scale...
+                                        Things on a very small scale...</div>
+                                </div>
+                            </div>
+                            <div class="whoweare__item item-whoweare">
+                                <div class="item-whoweare__icon">
+                                    <img src="img/free-icon-font-check-double-10506538.svg" alt="">
+                                </div>
+                                <div class="item-whoweare__body">
+                                    <div class="item-whoweare__title">the quick fox jumps over lazy dod</div>
+                                    <div class="item-whoweare__text">Things on a very small scale...
+                                        Things on a very small scale...Things on a very small scale...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="page__clients clients">
+            <div class="clients__container _container">
+                <div class="clients__items">
+                    <div class="clients__item">
+                        <img src="img/img_6.png" alt="clients">
+                    </div>
+                    <div class="clients__item">
+                        <img src="img/img_7.png" alt="clients">
+                    </div>
+                    <div class="clients__item">
+                        <img src="img/img_6.png" alt="clients">
+                    </div>
+                    <div class="clients__item">
+                        <img src="img/img_7.png" alt="clients">
+                    </div>
+                    <div class="clients__item">
+                        <img src="img/img_6.png" alt="clients">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="page__subscribe subscribe">
+            <div class="subscribe__container _container">
+                <div class="subscribe__body">
+                    <h4 class="subscribe__title">Subscribe for latest newsletter</h4>
+                    <form action="#" class="subscribe_form">
+                        <input autocomplete="off" type="email" required name="form[]"
+                               placeholder="Your Email" class="subscribe__input">
+                        <button type="submit" class="subscribe__button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="page__getintouch getintouch">
+            <div class="getintouch__container _container">
+                <div class="getintouch__header header-block">
+                    <h2 class="header-block__title">Get In Touch</h2>
+                    <div class="header-block__sub-title">
+                        Problems trying to resolve the conflict.
+                    </div>
+                </div>
+                <div class="getintouch__items">
+                    <div class="getintouch__item item-getintouch">
+                        <div class="item-getintouch__icon">
+                            <img src="img/img_5.png" alt="getintouch">
+                        </div>
+                        <div class="item-getintouch__emails">
+                            <a href="mailto:liberty102and8131186@gmail.com"
+                               class="item-getintouch__email">
+                                liberty102and8131186@gmail.com</a>
+                        </div>
+                        <div class="item-getintouch__label">Get Support</div>
+                        <a href="" class="item-getintouch__button">Submit Request</a>
+                    </div>
+                    <div class="getintouch__item item-getintouch item-getintouch_active ">
+                        <div class="item-getintouch__icon">
+                            <img src="img/img_4.png" alt="getintouch">
+                        </div>
+                        <div class="item-getintouch__emails">
+                            <a href="mailto:liberty102and8131186@gmail.com" class="item-getintouch__email">
+                                liberty102and8131186@gmail.com</a>
+                        </div>
+                        <div class="item-getintouch__label">Get Support</div>
+                        <a href="" class="item-getintouch__button">Submit Request</a>
+                    </div>
+                    <div class="getintouch__item item-getintouch">
+                        <div class="item-getintouch__icon">
+                            <img src="img/img_3.png" alt="getintouch">
+                        </div>
+                        <div class="item-getintouch__emails">
+                            <a href="mailto:liberty102and8131186@gmail.com" class="item-getintouch__email">
+                                liberty102and8131186@gmail.com</a>
+                        </div>
+                        <div class="item-getintouch__label">Get Support</div>
+                        <a href="" class="item-getintouch__button">Submit Request</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page__contact contact">
+            <div class="contact__container _container">
+                <div class="contact__body">
+                    <div class="contact__content">
+                        <h4 class="contact__title">Consulting Agency For Your Business</h4>
+                        <div class="contact__text">The Quick Fox Jumps...</div>
+                    </div>
+                    <a href="" class="contact__button">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__main _container">
+                <div class="footer__row">
+                    <div class="footer__column">
+                        <div class="footer__label">Company Info</div>
+                        <nav class="footer__menu menu-footer">
+                            <ul class="menu-footer__list">
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Services</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Book Inspection</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Contact Us</a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__column">
+                        <div class="footer__label">Legal</div>
+                        <nav class="footer__menu menu-footer">
+                            <ul class="menu-footer__list">
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Services</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Book Inspection</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Contact Us</a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__column">
+                        <div class="footer__label">Feature</div>
+                        <nav class="footer__menu menu-footer">
+                            <ul class="menu-footer__list">
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Services</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Book Inspection</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Contact Us</a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__column">
+                        <div class="footer__label">Resources</div>
+                        <nav class="footer__menu menu-footer">
+                            <ul class="menu-footer__list">
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Services</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Book Inspection</a> </li>
+                                <li class="menu-footer__item"><a href="" class="menu-footer__link">Contact Us</a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__column">
+                        <div class="footer__label">Get In Touch</div>
+                        <div class="footer__contacts contacts-footer">
+                            <a href="tel:9154405086" class="contacts-footer__item contacts-footer__item_phone">+7(915)4405086</a>
+                            <a href="" class="contacts-footer__item contacts-footer__item_map">USA Texas</a>
+                            <a href="mailto:liberty102and8131186@gmail.com" class="contacts-footer__item contacts-footer__item_email">liberty102and8131186@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__container _container">
+                <div class="footer__copy">Made With Love By AdamInspection All Right Reserved</div>
+                <div class="footer__social social">
+                    <a href="" class="social__item">
+                        <img src="img/img_8.png" alt="">
+                    </a>
+                    <a href="" class="social__item">
+                        <img src="img/img_8.png" alt="">
+                    </a>
+                    <a href="" class="social__item">
+                        <img src="img/img_8.png" alt="">
+                    </a>
+                    <a href="" class="social__item">
+                        <img src="img/img_8.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

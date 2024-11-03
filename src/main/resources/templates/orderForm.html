@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,
+    500,600,700,800" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Services Page</title>
+</head>
+<body>
+<div class="wrapper">
+  <header class="header">
+    <div class="header__container _container">
+      <a href="" class="header__logo">
+        AdamInspection
+      </a>
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="" class="menu__link">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Services</a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link"></a>
+          </li>
+          <li class="menu__item">
+            <a href="" class="menu__link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page">
+    <div class="page__main-block main-block">
+      <div class="main-block__container _container">
+        <div class="main-block__body-contact-page">
+          <h1 class="main-block__title">Уборка квартир и офисов в Бишкеке</h1>
+          <div class="main-block__text">
+            Crystal.kg – клининговая компания в Бишкеке.
+            Профессиональные услуги по уборке квартир,
+            офисов и частных домов по доступным ценам
+            от 39 сомов за кв.м.
+          </div>
+          <div class="main-block__buttons">
+            <a href="" class="main-block__button main-block__button_orange">
+              Наши услуги</a>
+            <a href="" class="main-block__button main-block__button_border">О компании</a>
+          </div>
+        </div>
+      </div>
+
+<form method="POST" th:action="@{/orders}" th:object="${cleaningServiceOrder}">
+  <h1>Order your taco creations!</h1>
+
+  <img th:src="@{/images/TacoCloud.png}"/>
+
+  <h3>Your tacos in this order:</h3>
+  <a th:href="@{/services-page}" id="another">Добавьте ещё</a><br/>
+  <ul>
+    <li th:each="cleaningService : ${cleaningServiceOrder.cleaningServices}">
+      <span th:text="${cleaningService.name}">cleaningService name</span></li>
+  </ul>
+
+  <div th:if="${#fields.hasErrors()}">
+        <span class="validationError">
+        Please correct the problems below and resubmit.
+        </span>
+  </div>
+
+  <input type="submit" value="Submit Order"/>
+</form>
+
+</body>
+</html>
